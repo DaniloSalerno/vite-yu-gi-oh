@@ -1,10 +1,12 @@
 <script>
 import AppArchetypeSelect from './AppArchetypeSelect.vue';
+import AppCardList from './AppCardList.vue';
 
 export default {
     name: 'AppMain',
     components: {
-        AppArchetypeSelect
+        AppArchetypeSelect,
+        AppCardList
     }
 }
 </script>
@@ -14,7 +16,7 @@ export default {
         <div class="container">
 
             <AppArchetypeSelect />
-
+            <AppCardList />
 
         </div>
     </main>
