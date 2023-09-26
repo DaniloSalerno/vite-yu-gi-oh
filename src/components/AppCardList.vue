@@ -1,8 +1,19 @@
 <script>
 import AppCard from './AppCard.vue';
+import { state } from '../state.js';
+
 
 export default {
     name: 'AppCardList',
+
+    data() {
+        return {
+            state
+        };
+    },
+    created() {
+        state.fetchDataCard();
+    },
     components: {
         AppCard
     }
@@ -13,7 +24,7 @@ export default {
     <div class="card_list">
 
         <div class="found">
-            Found 20 cards
+            Found {{ state.cards.length }} cards
         </div>
 
         <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-3">
