@@ -5,8 +5,9 @@ export default {
 </script>
 
 <template>
-    <div class="loader">
-
+    <div class="d-flex justify-content-center mt-5">
+        <div class="loader">
+        </div>
     </div>
 </template>
 

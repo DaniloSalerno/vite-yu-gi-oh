@@ -1,6 +1,5 @@
 <script>
 import { state } from '../state.js';
-import AppLoader from './AppLoader.vue';
 
 export default {
     name: 'AppCard',
@@ -11,9 +10,6 @@ export default {
     },
     created() {
         state.fetchDataCard();
-    },
-    components: {
-        AppLoader
     }
 }
 </script>
@@ -21,13 +17,7 @@ export default {
 <template>
     <div class="col" v-for="card in state.cards">
 
-
-
-        <div v-if="!state.status">
-            <AppLoader />
-        </div>
-
-        <div class="card rounded-0" v-else>
+        <div class="card rounded-0 border-0">
 
             <img :src="card.card_images[0].image_url" class="card-img-top" alt="...">
 
