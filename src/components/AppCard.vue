@@ -10,9 +10,6 @@ export default {
         return {
             state
         };
-    },
-    created() {
-        state.fetchDataCard();
     }
 }
 </script>

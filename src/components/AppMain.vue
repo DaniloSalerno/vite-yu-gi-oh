@@ -22,6 +22,11 @@ export default {
             this.state.fetchDataCard(urlByArchetype)
             console.log(this.state.archetypeName, urlByArchetype);
         }
+    },
+    created() {
+
+        state.fetchDataCard(this.state.url);
+        state.fetchDataArchetypes(this.state.urlArchetypesList)
     }
 }
 </script>
