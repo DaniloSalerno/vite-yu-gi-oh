@@ -24,7 +24,7 @@ export const state = reactive({
 
     },
 
-    fetchDataArchetypes(url, index) {
+    fetchDataArchetypes(url) {
         axios
             .get(url)
             .then(response => {
