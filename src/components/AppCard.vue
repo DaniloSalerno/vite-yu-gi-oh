@@ -48,13 +48,13 @@ export default {
 
 .card-body {
     background-color: $yu-gi_warning;
-    height: 100px;
+    height: 125px;
 
     .name {
         color: white;
         text-transform: uppercase;
         font-weight: bold;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         text-align: center;
 
     }

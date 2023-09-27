@@ -31,7 +31,7 @@ export default {
 
 
         <AppLoader v-if="!state.status"></AppLoader>
-        <div v-else class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-3">
+        <div v-else class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-3">
             <AppCard :card="card" v-for="card in state.cards"></AppCard>
         </div>
 
