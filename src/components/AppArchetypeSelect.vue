@@ -17,7 +17,7 @@ export default {
     <div class="py-4">
         <select class="form-select" aria-label="Default select example" name="archetype" id="archetype"
             @change="$emit('searchByArchetype')" v-model="this.state.archetypeName">
-            <option placeholder="Select Archetype" disabled>Select Archetype</option>
+            <option value="" disabled hidden>Select Archetype</option>
             <option v-for="archetype in state.archetypeList" :value="archetype.archetype_name">{{ archetype.archetype_name
             }}
             </option>
@@ -27,6 +27,6 @@ export default {
 
 <style lang="scss" scoped>
 #archetype {
-    width: 150px;
+    width: 250px;
 }
 </style>
