@@ -14,7 +14,7 @@ export default {
         };
     },
     created() {
-        state.fetchDataCard();
+        state.fetchDataCard(this.state.url);
     },
     components: {
         AppCard,

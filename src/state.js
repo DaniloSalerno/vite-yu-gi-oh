@@ -5,10 +5,11 @@ export const state = reactive({
     url: 'https://db.ygoprodeck.com/api/v7/cardinfo.php?num=50&offset=0',
     cards: '',
     status: false,
-    fetchDataCard() {
+    archetypeName: '',
+    fetchDataCard(url) {
 
         axios
-            .get(this.url)
+            .get(url)
             .then(response => {
 
                 this.status = true
@@ -16,7 +17,7 @@ export const state = reactive({
 
             })
             .catch(error => {
-                console.log(error);
+                console.error(error);
             })
 
     }

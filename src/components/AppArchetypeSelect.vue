@@ -1,17 +1,27 @@
 <script>
+
+import { state } from '../state.js';
+
+
 export default {
-    name: 'AppArchetypeSelect'
+    name: 'AppArchetypeSelect',
+    data() {
+        return {
+            state
+        }
+    }
 }
 </script>
 
 <template>
     <div class="py-4">
-        <select class="form-select" aria-label="Default select example" name="archetype" id="archetype">
-            <option value="1" selected>Alien</option>
-            <option value="2">Noble Knight</option>
-            <option value="3">Tainted Treasure</option>
-            <option value="4">Melodious</option>
-            <option value="5">Archfiend</option>
+        <select class="form-select" aria-label="Default select example" name="archetype" id="archetype"
+            @change="$emit('searchByArchetype')" v-model="this.state.archetypeName">
+            <option placeholder="Select Archetype" disabled>Select Archetype</option>
+            <option value="Alien">Alien</option>
+            <option value="Noble Knight">Noble Knight</option>
+            <option value="Melodious">Melodious</option>
+            <option value="Archfiend">Archfiend</option>
         </select>
     </div>
 </template>
