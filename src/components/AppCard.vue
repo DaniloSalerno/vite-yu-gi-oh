@@ -3,6 +3,9 @@ import { state } from '../state.js';
 
 export default {
     name: 'AppCard',
+    props: {
+        card: Object
+    },
     data() {
         return {
             state
@@ -15,7 +18,7 @@ export default {
 </script>
 
 <template>
-    <div class="col" v-for="card in state.cards">
+    <div class="col">
 
         <div class="card rounded-0 border-0">
 
